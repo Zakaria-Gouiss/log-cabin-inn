@@ -1,0 +1,110 @@
+:root {
+  --color-primary: #7a4f2f;
+  --color-dark: #2d221b;
+  --color-light: #f7f1e8;
+  --color-accent: #c8924b;
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background: var(--color-light);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 1.25rem 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: var(--color-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, rgba(122, 79, 47, 0.95), rgba(200, 146, 75, 0.85));
+  color: white;
+}
+
+.hero h1,
+.section h2 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 1.3rem;
+  border-radius: 999px;
+  background: white;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: #f3e8d8;
+}
+
+.site-footer {
+  padding: 2rem 0 3rem;
+  text-align: center;
+  color: #6f5c49;
+}
