@@ -3,8 +3,8 @@
   --color-dark: #2d221b;
   --color-light: #f7f1e8;
   --color-accent: #c8924b;
-  --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Inter", sans-serif;
+
+  --font-body: "Quicksand", sans-serif;
 }
 
 * {
@@ -42,7 +42,7 @@ img {
 }
 
 .brand {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-primary);
@@ -68,7 +68,7 @@ img {
 
 .hero h1,
 .section h2 {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   line-height: 1.15;
 }
 
