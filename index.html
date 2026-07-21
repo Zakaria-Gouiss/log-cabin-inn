@@ -24,6 +24,14 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
+    <script>
+      document.body.classList.toggle(
+        "dark-mode",
+        localStorage.getItem("theme")
+          ? localStorage.getItem("theme") === "dark"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches
+      );
+  </script>
     <header class="site-header">
       <div class="container">
         <a class="brand" href="#">Log Cabin Inn</a>
@@ -32,6 +40,9 @@
           <a href="#menu">Menu</a>
           <a href="#location">Location</a>
           <a href="#contact">Contact</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+            <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+          </button>
         </nav>
       </div>
     </header>
@@ -39,12 +50,12 @@
     <main id="content">
       <section class="hero" id="home">
         <div class="container">
-          <p class="eyebrow">Lorem ipsum • Dolor sit amet</p>
-          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+          <p class="eyebrow">Log Cabin Inn • Covington KY</p>
+          <h1>Welcome to the best family restaurant in NKY!</h1>
           <p>
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Experience delicious home-style cooking, generous portions, and genuine hospitality in our cozy log cabin atmosphere—come enjoy a meal made with care today!
           </p>
-          <a class="button" href="#menu">Explore More</a>
+          <a class="button" href="#menu">View Menu</a>
         </div>
       </section>
 
