@@ -145,9 +145,9 @@ body.dark-mode .hero {
 .hero h1 {
   font-size: clamp(2.2rem, 4vw, 3.5rem);
   padding: 0.35rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   display: inline-block;
-  border-radius: 1.0vb;
+  border-radius: 0.5rem;
 }
 
 .eyebrow {
@@ -157,11 +157,15 @@ body.dark-mode .hero {
   font-size: 0.85rem;
   padding: 0.35rem;
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 1.0vb;
+  border-radius: 0.5rem;
 }
 
 body.dark-mode .eyebrow {
   background-color: rgba(255, 255, 255, 0.16);
+}
+
+body.dark-mode .hero h1 {
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 .eyebrow:hover{

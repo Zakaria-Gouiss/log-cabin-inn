@@ -10,22 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const setTheme = (isDark) => {
-    body.classList.toggle("dark-mode", isDark);
+  body.classList.toggle("dark-mode", isDark);
 
-    if (toggle) {
-      toggle.setAttribute("aria-pressed", String(isDark));
-    }
+  if (toggle) {
+    toggle.setAttribute("aria-pressed", String(isDark));
+    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  }
 
-    if (toggleIcon) {
-      toggleIcon.textContent = isDark ? "☀" : "☾";
-    }
+  if (toggleIcon) {
+    toggleIcon.textContent = isDark ? "☀" : "☾";
+  }
 
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  };
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+};
 
-  const savedTheme = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  setTheme(savedTheme ? savedTheme === "dark" : prefersDark);
+  const isDark = body.classList.contains("dark-mode");
+  if (toggle) {
+    toggle.setAttribute("aria-pressed", String(isDark));
+    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  }
+  if (toggleIcon) {
+    toggleIcon.textContent = isDark ? "☀" : "☾";
+  }
 
   toggle?.addEventListener("click", () => {
     const nextTheme = !body.classList.contains("dark-mode");
